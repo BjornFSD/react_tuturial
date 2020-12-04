@@ -1,0 +1,56 @@
+[
+        {
+            "id": 1,
+        "title": "Czym jest react?",
+        "desc": "React JS jest kolejną biblioteką JavaScript używaną do budowania interaktywnych stron internetowych. Dla zrozumienia zróbmy krok w tym i zobaczmy z czym to się je. "
+        ,"subtitle": "\n Do czego służy JavaScript? \n \n",
+        "desc_2": "JS używany jest do tworzenia i kontrolowania dynamicznych stron. \n  Dynamiczne strony zawierają rzeczy jak animowane grafiki, pokaz slajdów zdjęć oraz interaktywne formularze.\n \n Za każdym razem, gdy odwiedzasz stronę internetową, na której rzeczy się poruszają, odświeżają lub w inny sposób zmieniają się na Twoim ekranie, nie wymagając od Ciebie ręcznego przeładowania strony internetowej, istnieje bardzo duża szansa, że JS jest językiem, w którym to się dzieje."        
+        },
+
+        {
+            "id": 2,
+        "title": "Dlaczego developersi używają ReactJS?",
+        "desc": "Biblioteka React specjalizuje się w pomaganiu developerom budowania interfejsu użytkownika. Jeśli chodzi o strony i aplikacje internetowe, interfejsty są zbiorem menu ekranowych, wyszukiwarek, przycisków i innych elementów, z którymi ktoś wchodzi w interakcję, aby korzystać z witryny lub aplikacji.",
+        "desc_2": "Przed ReactJS, developerzy często zatrzymywali się na budowaniu inferfejsu w czystym JavaScript lub z mniej sfokusowanym na interfejs jQuery, przez co popełniali więcej bugów i błędów. React posiada dwie kluczowe funkcje, które zwiększają jego atrakcyjność dla developerów: \n \n  -JSX \n  -Virtual DOM \n \n Przejdźmy do wyżej podanych zagadnień, aby lepiej zrozumieć ReactJS"
+    },
+    {
+            "id": 3,
+         "title": "JSX",
+         "desc": "Podstawą podstaw każdej strony jest dokument HTML. Przeglądarki czytają te dokumenty i naturalnie wyświetlają je na twoim urządzeniu. W trakcie procesu tworzą obiektowy model dokumentu tzw. DOM, czyli drzewo które reprezentuje sposób ułożenia strony internetowej. Do tego deweloperzy mogą dodawać dynamiczną zawartość do swoich projektów poprzez modyfikację DOM za pomocą m.in. JavaScript.",
+         "desc_2": "JSX(JavaScript eXtension) jest rozszerzeniem React, które zdecydowanie ułatwia im modyfikowanie DOM za pomocą prostego kodu w stylu HTML. JSX jest kompatybilny z każdą platformą, z którą może pracować. \n \n Nie jest to jednak tylko kwesta wygody, używanie JSX do aktualizacji DOM-u prowadzi do znaczącej poprawy wydajności strony i efektywności rozwoju, chodzi o kolejną funkcję jaką zaprezentuje, Virtual DOM."
+     },
+     {
+        "id": 4,
+     "title": "Virtual DOM",
+        "desc": "Jeśli nie używasz React JS (i JSX), Twoja strona użyje HTML do aktualizacji DOM (proces, który sprawia, że rzeczy zmieniają się na ekranie bez konieczności ręcznego odświeżania strony). Działa to dobrze dla prostych, statycznych stron internetowych, ale dla dynamicznych stron, które wymagają intensywnej interakcji z użytkownikiem, może stać się problemem (ponieważ cały DOM musi się przeładowywać za każdym razem, gdy użytkownik kliknie funkcję wymagającą odświeżenia strony). \n \n Jednakże jeśli developerzy używają JSX do manipulacji i aktualizacji DOM-u, ReactJS tworzy coś co nazywa się Virtual DOM. Jest on kopią strony DOM, a React JS używa tej kopii, aby zobaczyc, które części rzeczywistego DOM muszą się zmienić gdy takie zdarzenie ma miejsce i je podmienia np. kliknięcie jakiegoś przycisku. \n Ten rodzaj selektywnej aktualizacji zajmuje mniej czasu i mniej mocy obliczeniowej, co jest bardziej odczuwalne na większej skali projektu. \n \n"
+        , "img": "./img/VirtualDOM.png"
+ 
+    },
+    {
+    "id": 5,
+    "title": "Komponenty i ich podział",
+    "desc": "Komponenty pozwalają podzielić interfejs użytkownika na niezależne, pozwalające na ponowne użycie części i myśleć o każdej z nich osobno. Komponenty przyjmują wartości na wejściu zwane propsami i zwracają reactowe elementy. \n \n",
+    "img": "./img/component.png",
+    "desc_2": "\n Na powyższym zdjęciu możemy zauważyć jak rozdzielone są komponenty, aby kod był bardziej czytelny i daję nam również swobodę poruszania się pomiędzy plikami. \n \n \n \n "
+    ,"img_2": "./img/componentProps.png",
+    "desc_3": "\n Z kolei tutaj mamy przykład wykorzystania komponentu, renderowanie tego komponentu oraz wykorzystanie właściwości w danych komponentach. Takie komponenty nazywamy “komponentami funkcyjnymi”, gdyż są one dosłownie javascriptowymi funkcjami."
+} ,
+{
+    "id": 6,
+    "title": "Zdarzenia, eventy JS - React",
+    "desc": "Czym są zdarzenia? Większość interakcji na stronie internetowej czy aplikacji opiera się o zdarzenia(eventy). W czystym JavaScript, aby móc obsługiwać eventy używamy do tego przeznaczonych funkcji, które tworzą i usuwają tzw. event listenery. Raczej jest to wiadome jak wygląda składnia, ale przyjrzyjmy się jej dla przypomnienia. \n \n "
+    ,"subtitle": "JavaScript \n \n"
+    ,"img":"./img/eventJS.png",
+    "desc_2": "\n Wyżej mamy ukazany dość dlugo kod jak na prostą funkcję wyświetlania alerta. Jest dużo składni do zapamiętania i dla początkującego jest to naturalnie niewygodne i nieczytelne.\n \n",
+    "subtitle_2": "React \n \n ",
+    "img_2":"./img/eventReact.png", 
+    "desc_3": "\n Natomiast tutaj widzimy jak proste jest utworzenie prostego alerta, kod jest bardziej schludny i prosty. React również za Ciebie odpina zdarzenia gdy komponent jest niszczony i nie trzeba się tym martwić."
+},
+  {
+      "id": 7,
+      "title": "State, setState, stan komponentu",
+      "desc": "Stan komponentu jest przechowywany wewnątrz jego. "
+  }  
+
+           
+]

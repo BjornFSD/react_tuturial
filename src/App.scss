@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap");
+@import "./style/home.scss";
+@import "./style/content.scss";
+* {
+  margin: 0;
+  clear: both;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.scroll_to-top {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 40px;
+  right: 200px;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  border: 0;
+  background-color: #313131;
+  z-index: 1;
+}
+.scroll_to-top--animation {
+  animation: scrollTop 0.5s alternate ease infinite;
+}
+@keyframes scrollTop {
+  from {
+    transform: translateY(2px);
+  }
+  to {
+    transform: translateY(-1px);
+  }
+}
+.scroll_to-top:hover {
+  cursor: pointer;
+}
