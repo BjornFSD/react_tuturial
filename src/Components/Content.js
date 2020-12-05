@@ -15,9 +15,11 @@ function Content({ content }) {
           {data2.title}
         </div>
         <div className="article_desc">{data2.desc}</div>
+        <img className="article_img" src={data2.img_undertext1} alt="" />
         <div className="article_subtitle">{data2.subtitle}</div>
         <img className="article_img" src={data2.img} alt="" />
         <div className="article_desc">{data2.desc_2}</div>
+        <img className="article_img" src={data2.img_undertext2} alt="" />
         <div className="article_subtitle">{data2.subtitle_2}</div>
         <img className="article_img" src={data2.img_2} alt="" />
         <div className="article_desc">{data2.desc_3}</div>
@@ -26,10 +28,7 @@ function Content({ content }) {
     );
   });
 
-  // const ypos = document.getElementbyId("1").offsetTop;
-  //console.log(ypos);
-
-  //console.log(scrollToTitle);
+  // imports,  hooks, wady hooks, redux, context.api, gsap, api fetch, formularze react
 
   const dataTitles = Data.map((data) => {
     const scrollToTitle = () => {
@@ -41,7 +40,9 @@ function Content({ content }) {
 
     return (
       <div className="sidebar_titles">
-        <p onClick={scrollToTitle}>{data.title}</p>
+        <p onClick={scrollToTitle}>
+          {data.id}. {data.title}
+        </p>
       </div>
     );
   });

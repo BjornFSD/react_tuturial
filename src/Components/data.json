@@ -49,8 +49,37 @@
   {
       "id": 7,
       "title": "State, setState, stan komponentu",
-      "desc": "Stan komponentu jest przechowywany wewnątrz jego. "
-  } 
+      "desc": "Co robi state? State służy do przechowywania stanu komponentu. State można mutować dzięki funkcji setState, w porównaniu do prosów które są niemutowalne. Paradoksalnie mozna mutować propsy, ale przyjeła się taka zasada, że nie zmieniamy ich z wnętrza komponentu, do którego zostały przekazane. A, więc na prostym przykładzie możemy pokazać, ze state będzie przechowywać np. licznik. \n \n"
+      ,"img": "./img/state1.png",
+      "desc_2": "\n Metoda bind pomaga zapewnić, że drugi fragment działa tak samo jak pierwszy."
 
-            
+  }  ,
+{
+    "id": 8,
+    "title": "Importowanie i Eksportowanie",
+    "desc": "React Apps są w zasadzie zbiorem interaktywnych komponentów, same komponenty nie wystarczą, aby stworzyć pełnowartościową aplikację React, ponieważ aby stworzyć zbiór komponentów musimy najpierw poznać sposób wykorzystania i ponownego wykorzystania komponentów, które mogły być zdefiniowane gdzie indziej. Aby to zrobić, musimy znać dwie operacje szeroko znane jako Import i Eksport. \n\n",
+    "subtitle": "Importowanie",
+    "desc_2": "Importujemy domyślny eksport: Mówi się, że każdy moduł ma co najwyżej jeden domyślny eksport. Aby zaimportować domyślny eksport z pliku, możemy użyć tylko adresu i użyć słowa kluczowego, które zostało zaimportowane przed nim, lub możemy nadać nazwę importowi składającemu się na następującą składnię. \n\n import NAZWA from ADRES \n\n Importowanie nazwanych wartości: Każdy moduł może mieć kilka nazwanych parametrów i w celu zaimportowania jednego z nich powinniśmy użyć następującej składni. \n\n import { PARAMETR } from ADRES \n\n Importowanie kombinacji domyślnego eksportu i nazwanych wartości: Z tytułu jasno wynika, że musimy zobaczyć składnię tego samego. Aby zaimportować kombinację, powinniśmy użyć następującej składni. \n\n import NAZWA, { PARAMETR, ..} from ADRES \n\n",
+    "img_undertext2": "./img/import.png",
+    "subtitle_2": "\nEksportowanie",
+    "desc_3": "Teraz, import jest operacją, która wymaga zgody modułu. Importowanie jest możliwe tylko wtedy, gdy moduł lub nazwana właściwość, która ma być zaimportowana, została wyeksportowana w jego deklaracji. W React używamy słowa kluczowego export do wyeksportowania konkretnego modułu, nazwanego parametru lub kombinacji. Zobaczmy teraz różne sposoby, na jakie możemy użyć operacji importu w React. \n\n default export NAZWA \n\n Eksportowanie nazwanych wartości: Każdy moduł może mieć kilka nazwanych parametrów i aby wyeksportować jeden z nich powinniśmy użyć następującej składni. \n\n export {PARAMETR, ...} \n\n I podobnie dla wielokrotnego takiego eksportu możemy użyć przecinka do oddzielenia dwóch parametrów nazwy w obrębie aparatu kręconego. \n\n",
+    "img_3": "./img/export.png"
+},
+    {
+        "id": 9,
+        "title": "Hooki - hook stanu",
+        "desc": "Hook ten jest useStatem, wywołujemy go z wewnątrz kompnentu funkcyjnego, aby wzbogacić go o lokalny stan. React zachowa ten stan pomiędzy kolejnymi renderowaniami. Możesz wywołać te funkcję w procedurze obsługi zdarzenia albo z innego miejsca. Działa to mniej więcej tak samo, jak this.setState w komponencie klasowym, z tą różnicą, że nie scala on starych i nowych wartości. Jedynym argumentem funkcji useState jest stan początkowy. W przeciwieństwie do this.state, stan ten nie musi być obiektem, ale nic nie szkodzi żeby nim był. Wartość która podajemy w argumencie ze stanem początkowym jest wykorzystywana tylko podczas pierwszego renderowania. \n\n  Hooka stanu można użyć kilka razy w tym samym komponencie: \n\n",
+        "img_undertext1": "./img/useState.png",
+        "desc_2": "\n\n Składnia przypisania destruktyzującego tablic może nadać różne nazwy zmiennym stanu, które zadeklarowaliśmy wywołując funkcję useState."
+        ,"subtitle_2": "Czym jest hook dosłownie?",
+        "desc_3": "Hooki są funkcjami, które 'zachaczają się' w cylku życia i mechanizmach Reacta. Hooki nie działają w klasach, ale dzięki temu możemy posługiwać się nimi bez klas."
+    },
+    {
+        "id": 10,
+        "title": "Hook - hook efektów",
+        "desc": "Hook effect, daje możliwość przeprowadzania efektów na zewnątrz komponentu funkcyjnego oraz ma uproszczoną formę interfejsu API w porównaniu do componentDidMount(jest to odpowiednik useEffect dla komponentu klasowego). \n\n",
+        "img": "./img/useEffect.png",
+        "desc_2": "\n\n Funkcja useEffect, wywołuję twój efekt zaraz po opróżnieniu bufora zmian drzewa DOM. Efekty sa deklarowane wewnątrz kompnentu i dzięki temu mają dostę do propsów i state. React zawsze uruchamia efekty po każdym renderowaniu. Również jak z useState, useEffect można użyć więcej razy niż raz w komponencie."
+    }  
 ]
+
