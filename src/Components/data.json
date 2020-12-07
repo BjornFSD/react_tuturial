@@ -3,7 +3,7 @@
             "id": 1,
         "title": "Czym jest react?",
         "desc": "React JS jest kolejną biblioteką JavaScript używaną do budowania interaktywnych stron internetowych. Dla zrozumienia zróbmy krok w tym i zobaczmy z czym to się je. "
-        ,"subtitle": "\n Do czego służy JavaScript? \n \n",
+        ,"subtitle": " Do czego służy JavaScript? \n",
         "desc_2": "JS używany jest do tworzenia i kontrolowania dynamicznych stron. \n  Dynamiczne strony zawierają rzeczy jak animowane grafiki, pokaz slajdów zdjęć oraz interaktywne formularze.\n \n Za każdym razem, gdy odwiedzasz stronę internetową, na której rzeczy się poruszają, odświeżają lub w inny sposób zmieniają się na Twoim ekranie, nie wymagając od Ciebie ręcznego przeładowania strony internetowej, istnieje bardzo duża szansa, że JS jest językiem, w którym to się dzieje."        
         },
 
@@ -70,7 +70,7 @@
         "title": "Hooki - hook stanu",
         "desc": "Hook ten jest useStatem, wywołujemy go z wewnątrz kompnentu funkcyjnego, aby wzbogacić go o lokalny stan. React zachowa ten stan pomiędzy kolejnymi renderowaniami. Możesz wywołać te funkcję w procedurze obsługi zdarzenia albo z innego miejsca. Działa to mniej więcej tak samo, jak this.setState w komponencie klasowym, z tą różnicą, że nie scala on starych i nowych wartości. Jedynym argumentem funkcji useState jest stan początkowy. W przeciwieństwie do this.state, stan ten nie musi być obiektem, ale nic nie szkodzi żeby nim był. Wartość która podajemy w argumencie ze stanem początkowym jest wykorzystywana tylko podczas pierwszego renderowania. \n\n  Hooka stanu można użyć kilka razy w tym samym komponencie: \n\n",
         "img_undertext1": "./img/useState.png",
-        "desc_2": "\n\n Składnia przypisania destruktyzującego tablic może nadać różne nazwy zmiennym stanu, które zadeklarowaliśmy wywołując funkcję useState."
+        "desc_2": "\n Składnia przypisania destruktyzującego tablic może nadać różne nazwy zmiennym stanu, które zadeklarowaliśmy wywołując funkcję useState."
         ,"subtitle_2": "Czym jest hook dosłownie?",
         "desc_3": "Hooki są funkcjami, które 'zachaczają się' w cylku życia i mechanizmach Reacta. Hooki nie działają w klasach, ale dzięki temu możemy posługiwać się nimi bez klas."
     },
@@ -79,7 +79,22 @@
         "title": "Hook - hook efektów",
         "desc": "Hook effect, daje możliwość przeprowadzania efektów na zewnątrz komponentu funkcyjnego oraz ma uproszczoną formę interfejsu API w porównaniu do componentDidMount(jest to odpowiednik useEffect dla komponentu klasowego). \n\n",
         "img": "./img/useEffect.png",
-        "desc_2": "\n\n Funkcja useEffect, wywołuję twój efekt zaraz po opróżnieniu bufora zmian drzewa DOM. Efekty sa deklarowane wewnątrz kompnentu i dzięki temu mają dostę do propsów i state. React zawsze uruchamia efekty po każdym renderowaniu. Również jak z useState, useEffect można użyć więcej razy niż raz w komponencie."
-    }  
+        "desc2": "\n\n Funkcja useEffect, wywołuję twój efekt zaraz po opróżnieniu bufora zmian drzewa DOM. Efekty sa deklarowane wewnątrz kompnentu i dzięki temu mają dostę do propsów i state. React zawsze uruchamia efekty po każdym renderowaniu. Również jak z useState, useEffect można użyć więcej razy niż raz w komponencie."
+    },
+    {
+        "id": 11,
+        "title": "Redux",
+        "desc": "Redux jest managerem stanu, jednym z założen jest jednokierunkowy przepływ danych w aplikacji, który nie powinien ich mutować. Natomist jeśli potrzebuje zaktualizować dane, to wykonuje się poprzez setState. \n\n Idea Redux opiera się o założenie, że stan aplikacji (dane) są wynikiem poprzedniego (w tym początkowego) stanu zmodyfikowanego przez akcje - dzięki temu założeniu możliwe jest łatwe testowanie, zapisywanie i wznawianie. \n\n ",   
+        "img_undertext1": "./img/redux1.png",
+        "subtitle": "Store",
+        "desc_2": "Najważnieszym elementem reduxa jest store, są tam przechowywane dane, są przetwarzane akcje oraz store obsługuje bardziej złożone mechanizmy. Store tworzone jest poprzez wywołanie funkcji createStore i przekazanie do niej naszego reducera. \n\n store.dispatch(object) \n\n Funkcja dispatch pozwala na przekazanie akcji do store, co spowoduje wywołanie reducerów i zaktualizuje obiekty. \n\n",
+        "img_undertext2": "./img/store.png",
+        "subtitle_2": "\nAkcje",
+        "desc_3": "Akcje w reduxie to po prostu obiekt, który przyjmuję właściwość type, typu string który przybiera nazwę wykonywanej operacji. \n\n",
+        "img_3": "./img/actions.png",
+        "subtitle_3": "\n Reducery",
+        "desc_4": "Reducery są czystymi funkcjami, która jest wywołana z aktualnym stanem oraz przeprowadza odpowiednie akcje i zwraca nowy stan, jeżeli reducer nie da rady obsłużyć się daną akcją, powinien zwrócic niezmodyfikowany stan \n\n",
+        "img_5": "./img/reducer.png"
+    }   
 ]
 

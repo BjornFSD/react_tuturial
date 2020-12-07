@@ -3,7 +3,7 @@ import Data from "./data.json";
 
 function Content({ content }) {
   const dataText = Data.map((data2) => {
-    console.log(data2.id);
+    // console.log(data2.id);
     const dataLenght = Object.keys(Data).length;
     const transparent = (data2.id - 1) / (dataLenght - 1) / 2;
     const gradient = {
@@ -24,6 +24,17 @@ function Content({ content }) {
         <img className="article_img" src={data2.img_2} alt="" />
         <div className="article_desc">{data2.desc_3}</div>
         <img className="article_img" src={data2.img_3} alt="" />
+        <div className="article_subtitle">{data2.subtitle_3}</div>
+        <img className="article_img" src={data2.img_4} alt="" />
+        <div className="article_desc">{data2.desc_4}</div>
+        <img className="article_img" src={data2.img_5} alt="" />
+        {/* {
+          (data2 = "titles" ? (
+            <div className="article_title">{data2.title}</div>
+          ) : (
+            "sad"
+          ))
+        } */}
       </div>
     );
   });
