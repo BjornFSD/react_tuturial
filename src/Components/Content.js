@@ -10,10 +10,13 @@ function Content({ content }) {
       background: `rgba(141, 227, 232, ${transparent})`,
     };
     return (
-      <div className="article" style={gradient}>
-        <div className="article_title" id={`${data2.id}`}>
-          {data2.title}
-        </div>
+      <div
+        className="article"
+        style={gradient}
+        key={`${data2.id}`}
+        id={`${data2.id}`}
+      >
+        <div className="article_title">{data2.title}</div>
         <div className="article_desc">{data2.desc}</div>
         <img className="article_img" src={data2.img_undertext1} alt="" />
         <div className="article_subtitle">{data2.subtitle}</div>
@@ -38,19 +41,19 @@ function Content({ content }) {
       </div>
     );
   });
-
   // imports,  hooks, wady hooks, redux, context.api, gsap, api fetch, formularze react
 
   const dataTitles = Data.map((data) => {
     const scrollToTitle = () => {
+      console.log(document.getElementById(data.id).offsetTop);
       window.scrollTo({
-        top: document.getElementById(data.id).offsetTop - 30,
+        top: document.getElementById(data.id).offsetTop - 5,
         behavior: "smooth",
       });
     };
 
     return (
-      <div className="sidebar_titles">
+      <div className="sidebar_titles" key={`${data.id}`}>
         <p onClick={scrollToTitle}>
           {data.id}. {data.title}
         </p>

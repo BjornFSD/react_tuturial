@@ -6,9 +6,11 @@
   background-color: #f4f4f4;
 }
 .sidebar {
+  position: sticky;
+  top: 15px;
   width: 20%;
   background-color: white;
-  height: 150vh;
+  height: 100%;
   margin-right: 50px;
   padding: 30px 20px;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1), -4px 4px 4px rgba(0, 0, 0, 0.1);

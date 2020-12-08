@@ -86,7 +86,7 @@
         "title": "Redux",
         "desc": "Redux jest managerem stanu, jednym z założen jest jednokierunkowy przepływ danych w aplikacji, który nie powinien ich mutować. Natomist jeśli potrzebuje zaktualizować dane, to wykonuje się poprzez setState. \n\n Idea Redux opiera się o założenie, że stan aplikacji (dane) są wynikiem poprzedniego (w tym początkowego) stanu zmodyfikowanego przez akcje - dzięki temu założeniu możliwe jest łatwe testowanie, zapisywanie i wznawianie. \n\n ",   
         "img_undertext1": "./img/redux1.png",
-        "subtitle": "Store",
+        "subtitle": "\nStore",
         "desc_2": "Najważnieszym elementem reduxa jest store, są tam przechowywane dane, są przetwarzane akcje oraz store obsługuje bardziej złożone mechanizmy. Store tworzone jest poprzez wywołanie funkcji createStore i przekazanie do niej naszego reducera. \n\n store.dispatch(object) \n\n Funkcja dispatch pozwala na przekazanie akcji do store, co spowoduje wywołanie reducerów i zaktualizuje obiekty. \n\n",
         "img_undertext2": "./img/store.png",
         "subtitle_2": "\nAkcje",
@@ -95,6 +95,35 @@
         "subtitle_3": "\n Reducery",
         "desc_4": "Reducery są czystymi funkcjami, która jest wywołana z aktualnym stanem oraz przeprowadza odpowiednie akcje i zwraca nowy stan, jeżeli reducer nie da rady obsłużyć się daną akcją, powinien zwrócic niezmodyfikowany stan \n\n",
         "img_5": "./img/reducer.png"
-    }   
+    },
+    {
+        "id": 12,
+        "title": "Context API",
+        "desc": "Pozwala nam wprowadzić do aplikacji pewnych globalnych ustawień, od których mogą zależeć niektóre komponenty. API nowej wersji Reacta wzbogacone zostało o metodę createContext, której zadaniem jest, jak sama nazwa wskazuje, tworzenie kontekstu. W typowej aplikacji reactowej dane przekazywane są z góry w dół (od rodzica do dziecka) poprzez właściwości. Może się to jednak okazać zbyt uciążliwe w przypadku niektórych danych (np. preferencje językowe, schemat UI czy paleta kolorów), z których korzystają komponenty na wielu poziomach struktury. Konteksty umożliwiają współdzielenie pewnych wartości przez takie komponenty bez konieczności przekazywania ich jako właściwości na każdym poziomie drzewa. ",
+        "subtitle": ""
+    },
+    {
+        "id": 13,
+        "title": "Porównanie Context API do Reduxa",
+        "desc_2": "Moim zdaniem to czy będziemy korzystać z Context API bądź Reduxa jest zaleźne od tego jak duży będzie nasza aplikacja, jak dużo będziemy musieli przekierowywać danych między komponentami i żeby sporo stanów było dostepnych globalnie. Wydaje mi się, że jeżeli twój projekt będzie mały i globalny stan niewielki to Context API będzie bardziej pasował. Jeśli natomiast twój projekt będzie duży to Redux może okazać się lepszym rozwiązaniem, które poza dostarczaniem globalnego stanu dla aplikacji, dodatkowo pomaga lepiej ustrukturyzować całą aplikację."
+    },
+    {
+        "id": 14,
+        "title": "GSAP - Animacje",
+        "desc": "Jest to zbiór narzędzi do tworzenia animacji w JS. Obsługuje podstawowe funkcje animacji, takich jak ruch w dowolnym kierunku, czas trwania, zmiana koloru, przeźroczystości, skalowania, obracania obiektu. Na tym jednak się nie kończy. Można manipulować opóźnieniem animacji, krzywą prędkości, wykonywać przekształcenia 3D. Animacje mogą nachodzić na siebie lub występować jedna po drugiej. Jest też sporo wtyczek z zaawansowanymi funkcjami.",
+         "subtitle": "Użycie \n\n",
+         "img": "./img/gsapExample.png",
+        "desc_2": "Wystarczy zainstalować poprzez 'npm install gsap' i zaimportować jak wyżej, by móc korzystać z GSAPA.",
+        "subtitle_2": "Róznice do CSS",
+        "desc_3": "Nie ma sensu zaciągać dodatkowej paczki GSAP do prostych i jednostkowych animacji takich jak zmiana koloru, zmiana wielkości, przesunięcie obiektu itp. CSS poradzi sobie z tym bez problemu. Prawdziwa moc tego frameworku ukazuje się, gdy tworzymy stronę lub aplikację naszpikowaną bardziej skomplikowanymi animacjami.\n\n-GASP posiada linię czasu, która sprawia, że długie i skomplikowane animacje łatwo się kontroluje, co w CSS może być udręką. \n-Animacje mogą być zagnieżdżone. \n-Ma lepsze odwzorowanie fizyki. Posiada łatwą i zwartą składnię. \n-Nie wymaga prefiksów. "
+    },
+    {
+        "id": 15,
+        "title": "Fetch API",
+        "desc": "Fetch API zapewnia interfejsowi JS uzyskanie dostępu i manipulowanie częściami HTTP, między innymi żądania i odpowiedzi. Zapewnia również globalną metodę fetch(), która zapewnia łatwy i logiczny sposób pobierania danych z calej sieci.\n\n Ten rodzaj funkcjonalności został wcześniej osiągnięty za pomocą XMLHttpRequest. Fetch zapewnia lepszą alternatywę, która może być łatwo wykorzystana przez inne technologie.",
+        "img": "./img/Fetch.png",
+        "desc_2": "\n Wyżej pobieramy plik JSON w całości i wyświetlamy go w konsoli. Najprostsze użycie fetch() bierze jeden argument - ścieżkę do zasobu, który chcesz pobrać - i zwraca obietnicę zawierającą odpowiedź(response). \n Inny przykład wykorzystania fetch:",
+        "img_2": "./img/FetchAPI.png"
+    }
 ]
 
