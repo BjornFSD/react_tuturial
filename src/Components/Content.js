@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { useWindowScroll } from "react-use";
 import Data from "./data.json";
 
 function Content({ content }) {
+  const [isActive, setIsActive] = useState(false);
+
   const dataText = Data.map((data2) => {
     // console.log(data2.id);
     const dataLenght = Object.keys(Data).length;
@@ -63,8 +66,17 @@ function Content({ content }) {
 
   return (
     <div className="content" ref={content}>
-      <div className="sidebar">
+      <div
+        className={
+          isActive ? "sidebar_burger sidebar_burger-active" : "sidebar_burger"
+        }
+        onClick={() => setIsActive(!isActive)}
+      >
+        {isActive ? <p>Close</p> : <p>Menu</p>}
+      </div>
+      <div className={isActive ? "sidebar sidebar_active" : "sidebar"}>
         <p className="sidebar_title">Spis treści</p>
+
         {dataTitles}
       </div>
       <div className="textbar">{dataText}</div>

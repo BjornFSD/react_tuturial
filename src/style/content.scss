@@ -1,14 +1,13 @@
 .content {
   display: flex;
-  width: 100%;
-  padding: 1rem 300px;
-  justify-self: center;
+  padding: 1rem 0;
+  justify-content: center;
   background-color: #f4f4f4;
 }
 .sidebar {
   position: sticky;
   top: 15px;
-  width: 20%;
+  width: 270px;
   background-color: white;
   height: 100%;
   margin-right: 50px;
@@ -31,12 +30,32 @@
     cursor: pointer;
   }
 }
+.sidebar_burger {
+  display: none;
+  top: 20px;
+  width: 100px;
+  justify-content: center;
+  right: 0;
+  font-size: 30px;
+  color: black;
+  background-color: #61d9fb;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1), -4px 4px 4px rgba(0, 0, 0, 0.1);
+}
+.sidebar_active {
+  animation: sidebarPos 2s ease;
+}
+@keyframes sidebarPos {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0;
+  }
+}
 
 .textbar {
   width: 800px;
   background-color: white;
-  // background: rgb(80/200, 80, 80);
-
   .article {
     padding: 30px 40px 30px 40px;
     white-space: pre-line;
@@ -63,5 +82,30 @@
     &_img {
       width: 100%;
     }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .content {
+    overflow: hidden;
+  }
+  .sidebar {
+    display: none;
+    overflow: scroll;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  .sidebar_active {
+    display: block;
+  }
+  .sidebar_burger {
+    display: flex;
+    position: fixed;
+
+    z-index: 300;
+  }
+  .textbar {
+    width: 90%;
   }
 }

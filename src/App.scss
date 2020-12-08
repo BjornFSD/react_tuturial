@@ -39,3 +39,10 @@
 .scroll_to-top:hover {
   cursor: pointer;
 }
+
+@media only screen and (max-width: 600px) {
+  .scroll_to-top {
+    bottom: 30px;
+    right: 20px;
+  }
+}
