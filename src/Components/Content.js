@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { useWindowScroll } from "react-use";
+import React, { useState } from "react";
+
 import Data from "./data.json";
 
 function Content({ content }) {
