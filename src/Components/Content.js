@@ -56,7 +56,11 @@ function Content({ content }) {
     };
 
     return (
-      <div className="sidebar_titles" key={`${data.id}`}>
+      <div
+        className="sidebar_titles"
+        key={`${data.id}`}
+        onClick={() => setIsActive(!isActive)}
+      >
         <p onClick={scrollToTitle}>
           {data.id}. {data.title}
         </p>

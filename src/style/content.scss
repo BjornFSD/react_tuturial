@@ -89,12 +89,27 @@
   .content {
     overflow: hidden;
   }
+
   .sidebar {
     display: none;
     overflow: scroll;
     position: fixed;
     top: 0;
     left: 0;
+    width: 220px;
+    padding: 20px 20px;
+
+    &_title {
+      font-size: 18px;
+    }
+    &_titles {
+      margin-bottom: 15px;
+      font-size: 14px;
+    }
+    &_titles:hover {
+      color: #61d9fb;
+      cursor: pointer;
+    }
   }
   .sidebar_active {
     display: block;
@@ -107,5 +122,85 @@
   }
   .textbar {
     width: 90%;
+    background-color: white;
+    .article {
+      &_title {
+        font-size: 22px;
+        line-height: 26px;
+        padding-bottom: 10px;
+      }
+      &_subtitle {
+        font-size: 16px;
+        padding: 0 12px;
+      }
+      &_desc {
+        text-align: justify;
+        font-size: 12px;
+      }
+      &_img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .content {
+    overflow: hidden;
+  }
+
+  .sidebar {
+    display: none;
+    overflow: scroll;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    padding: 20px 20px;
+    box-shadow: 4px 4px 4px rgba(#000, $alpha: 0.3),
+      -4px 4px 4px rgba(#000, $alpha: 0.3);
+    &_title {
+      font-size: 32px;
+    }
+    &_titles {
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+    &_titles:hover {
+      color: #61d9fb;
+      cursor: pointer;
+    }
+  }
+  .sidebar_active {
+    display: block;
+  }
+  .sidebar_burger {
+    display: flex;
+    position: fixed;
+    width: 150px;
+    font-size: 40px;
+    z-index: 300;
+  }
+  .textbar {
+    width: 90%;
+    background-color: white;
+    .article {
+      &_title {
+        font-size: 28px;
+        line-height: 30px;
+        padding-bottom: 10px;
+      }
+      &_subtitle {
+        font-size: 22px;
+        padding: 0 12px;
+      }
+      &_desc {
+        text-align: justify;
+        font-size: 16px;
+      }
+      &_img {
+        width: 100%;
+      }
+    }
   }
 }
